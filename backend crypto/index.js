@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 1234;
+const port = 3000;
 const db = require("./models");
 
 app.use(express.json());
@@ -10,14 +10,15 @@ app.use(
     })
 );
 
-const userRoutes = require("./router/user");
-const walletRoutes = require("./router/wallet");
+const walletRoutes = require("./routes/WalletRoutes");
+const UserRoutes = require("./routes/UserRoute");
 
-app.use("/user", userRoutes);
+app.use("/user", UserRoutes);
 app.use("/wallet", walletRoutes);
+
 
 db.sequelize.sync().then((res) => {
     app.listen(port, () => {
-        console.log(`Example app listening at http://localhost:1234`);
+        console.log(`Example app listening at http://localhost:${port}`);
     });
 });
