@@ -59,24 +59,20 @@ export default function SigninWithGoogle({ navigation }) {
 
     return (
         
-
         <View style={styles.container}>
+            <Background>
         {/* <Image style={{width:180, height:80}} source={require('../assets/home.png')}/> */}
-        <Image source={require('../assets/home.png')} style = {{height: 200, width: 250, resizeMode : 'stretch',}} />
+        {/* <Image source={require('../assets/home.png')} style = {{height: 200, width: 250, resizeMode : 'stretch',}} /> */}
 
-        <TouchableOpacity  style={styles.appButtonContainer1}>
-
-                <Text style={styles.appButtonText}>Login </Text>
-           </TouchableOpacity> 
+      
     
             <TouchableOpacity onPress={handleGoogleSignin} style={styles.appButtonContainer}>
-                <Fontisto name="google" size={25} color='#fff'/>
+                <Fontisto name="google" size={30} color='#fff'/>
 
                 <Text style={styles.appButtonText}>Sign in with Google </Text>
            </TouchableOpacity> 
-           
+           </Background>
         </View>
-
 
 // <TextInput
 //  label="Email"
@@ -116,7 +112,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#0F1C5A'
+        backgroundColor: '#051142'
 
 
     },
@@ -143,7 +139,7 @@ const styles = StyleSheet.create({
         marginTop:20,
         alignItems: 'center',
         flexDirection: 'row',
-        width: '80%',
+        width: '90%',
     },
     appButtonContainer1: {
         elevation: 8,

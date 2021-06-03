@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#0F1C5A',
     marginTop:0,
-    padding:10
+    padding:0
   },
   listItem:{
     margin:10,
